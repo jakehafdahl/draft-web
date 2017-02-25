@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Draft App</title>
+	</head>
+	<body>
+		<h1>Hello World</h1>
+		<ul>
+		<%= for {draft_name,_} <- drafts do %>
+			<li><%= draft_name %></li>
+		<% end %>
+		</ul>
+	</body>
+</html>

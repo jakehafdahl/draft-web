@@ -1,0 +1,13 @@
+{application,draft,
+             [{description,"draft"},
+              {modules,['Elixir.Draft','Elixir.Draft.Lobby',
+                        'Elixir.Draft.Lobby.SubSupervisor',
+                        'Elixir.Draft.Lobby.Supervisor',
+                        'Elixir.Draft.Orchestrator',
+                        'Elixir.Draft.Orchestrator.Supervisor',
+                        'Elixir.Draft.State','Elixir.Draft.Team',
+                        'Elixir.Draft.Team.Supervisor']},
+              {registered,[]},
+              {vsn,"0.0.1"},
+              {applications,[kernel,stdlib,elixir,logger]},
+              {mod,{'Elixir.Draft',[]}}]}.
