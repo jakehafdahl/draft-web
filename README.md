@@ -1,19 +1,32 @@
 # DraftWeb
 
-**TODO: Add description**
+**Purpose**
+To wrap the draft OTP application
 
-## Installation
+## API
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `draft_web` to your list of dependencies in `mix.exs`:
+GET "/lobby/new"
+use this to get to the html page that lets you configure a new draft
 
-```elixir
-def deps do
-  [{:draft_web, "~> 0.1.0"}]
-end
-```
+POST "/lobby/create"
+use this to create a draft lobby with the given configuration
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/draft_web](https://hexdocs.pm/draft_web).
+takes there arguments
 
+returns
+
+GET /lobby/<lobby_id>
+will bring you to a page to join the draft
+
+GET /lobby/<lobby_id>/participant/<participant_id>
+will bring you to a page which will be the draft for a given particpant
+
+POST /lobby/<lobby_id>/participant/<participant_id>/start_draft
+will begin the draft for all pericipants in the lobby, 
+can only be done by the participant that created the lobby
+
+POST /lobby/<lobby_id>/participant/<participant_id>/draft_player
+
+POST /lobby/<lobby_id>/participant/<participant_id>/update_watchlist
+
+POST /lobby/<lobby_id>/participant/<participant_id>/update_projection

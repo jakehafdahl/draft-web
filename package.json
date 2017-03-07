@@ -1,0 +1,25 @@
+{
+  "name": "draft-web",
+  "version": "1.0.0",
+  "description": "Web interface that wraps the draft OTP application",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jakehafdahl/draft-web.git"
+  },
+  "author": "Jacob Hafdahl",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jakehafdahl/draft-web/issues"
+  },
+  "homepage": "https://github.com/jakehafdahl/draft-web#readme",
+  "dependencies": {
+    "bower": "^1.8.0"
+  }
+}

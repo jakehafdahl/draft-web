@@ -3,15 +3,26 @@ defmodule DraftWeb.Router do
 	require EEx
 	require Logger
 
+	plug Plug.Static,
+		at: "/public",
+		from: "web/public"
+
+	plug Plug.Parsers,  parsers: [:json],
+						pass: ["application/json"],
+						json_decoder: Poison
 	plug :match
 	plug :dispatch
 
-	EEx.function_from_file :defp, :home_index, "web/templates/index.eex", [:drafts]
+
+	use DraftWeb.View
+
 	get "/" do
 		drafts = Draft.Orchestrator.list_drafts
-		content = home_index(drafts)
-		send_resp(conn, 200, content)
+		
+		send_resp(conn, 200, render("index.eex", drafts: drafts))
 	end
+
+	forward "/lobby", to: DraftWeb.LobbyController
 
 	match _ do
 		send_resp(conn, 404, "Oops!... Not Found dummy")

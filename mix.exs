@@ -32,6 +32,7 @@ defmodule DraftWeb.Mixfile do
     [
       {:plug,   "~>1.3.0"},
       {:cowboy, "~>1.1"},
+      {:poison, "~>3.1.0"},
       {:draft, path: "../draft"}
       # {:draft, git: "https://github.com/jakehafdahl/draft.git"}
     ]

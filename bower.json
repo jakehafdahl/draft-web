@@ -1,0 +1,21 @@
+{
+  "name": "draft-web",
+  "description": "Web interface that wraps the draft OTP application",
+  "main": "index.js",
+  "authors": [
+    "Jacob Hafdahl"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/jakehafdahl/draft-web",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "web/public/js/libs/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.1"
+  }
+}
