@@ -19,7 +19,7 @@ defmodule DraftWeb.Router do
 	get "/" do
 		drafts = Draft.Orchestrator.list_drafts
 		
-		send_resp(conn, 200, render("index.eex", drafts: drafts))
+		send_resp(conn, 200, render("index.eex", drafts: drafts, layout: "/layout.eex"))
 	end
 
 	forward "/lobby", to: DraftWeb.LobbyController

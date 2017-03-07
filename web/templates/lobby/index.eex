@@ -1,20 +1,11 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>Create new lobby</title>
-		<script type="application/javascript" src="/public/js/lib/jquery/dist/jquery.min.js"></script> 
-	</head>
-	<body>
-		<div class="draft-create-container">
-			<label>Draft Name</label>
-			<input type="text" name="draft_name" value="Northern Nightmare" />
-			<input type="number" name="num_teams" value="12" />
-			<input type="text" name="setting" value="foo" />
-			<input type="text" name="setting" value="bar" />
-			<input type="text" name="setting" value="baz" />
-			<input id="submit" type="button"  value="Submit" />
-		</div>
-		<script type="application/javascript" src="/public/js/util/utils.js"></script> 
-		<script type="application/javascript" src="/public/js/lobby/create.js"></script> 
-	</body>
-</html>
+<div class="draft-create-container">
+	<label>Draft Name</label>
+	<input type="text" name="draft_name" value="Northern Nightmare" />
+	<input type="number" name="num_teams" value="12" />
+	<input type="text" name="setting" value="foo" />
+	<input type="text" name="setting" value="bar" />
+	<input type="text" name="setting" value="baz" />
+	<input id="submit" type="button"  value="Submit" />
+</div>
+<script type="application/javascript" src="/public/js/util/utils.js"></script> 
+<script type="application/javascript" src="/public/js/lobby/create.js"></script> 

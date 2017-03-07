@@ -1,14 +1,8 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>Draft App</title>
-	</head>
-	<body>
-		<ul>
-		<%= for {draft_name,_} <- @drafts do %>
-			<li><%= draft_name %></li>
-		<% end %>
-		</ul>
-		<a href="/lobby/new" type="button">Create new draft!</a>
-	</body>
-</html>
+<div>		
+	<ul>
+	<%= for {draft_name,_} <- @drafts do %>
+		<li><%= draft_name %></li>
+	<% end %>
+	</ul>
+	<a href="/lobby/new" type="button">Create new draft!</a>
+</div>

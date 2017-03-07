@@ -9,7 +9,7 @@ defmodule DraftWeb.LobbyController do
 	use DraftWeb.View
 
 	get "/new" do
-		send_resp(conn, 200, render("lobby/index.eex", []))
+		send_resp(conn, 200, render("lobby/index.eex", [], layout: "lobby/layout.eex"))
 	end
 
 	post "/create" do
@@ -26,7 +26,7 @@ defmodule DraftWeb.LobbyController do
 	get "/:lobby_name" do
 		_draft_pid = Draft.Lobby.get_pid(lobby_name)
 
-		send_resp(conn, 200, render("lobby/join.eex", lobby: lobby_name))
+		send_resp(conn, 200, render("lobby/join.eex", lobby: lobby_name, layout: "lobby/layout.eex"))
 	end
 
 	match _ do

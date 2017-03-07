@@ -10,7 +10,7 @@ defmodule DraftWeb.Template do
 	end
 	
 	defmacro __before_compile__(_env) do
-		templates = find_templates
+		templates = find_templates()
 		
 		ast = templates |> Enum.map(fn(path) -> compile(path) end)
 		
@@ -54,7 +54,7 @@ end
 defmodule DraftWeb.View do
 	use DraftWeb.Template
 
-	def render(:layout, path, assigns), do: render("layout.eex", [path: path, locals: assigns])
+	def render(path, assigns, [layout: layout]), do: render(layout, [path: path, locals: assigns])
 
 	def render(path, assigns) do
 		name = view_name(path)
